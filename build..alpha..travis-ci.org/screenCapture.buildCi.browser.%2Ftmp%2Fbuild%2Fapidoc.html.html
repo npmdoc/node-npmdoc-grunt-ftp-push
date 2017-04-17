@@ -1,0 +1,1290 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://robert-w.github.io/grunt-ftp-push">grunt-ftp-push (v1.2.0)</a>
+</h1>
+<h4>Deploy your files to a FTP server.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-ftp-push">module grunt-ftp-push</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.grunt-ftp-push">
+            function <span class="apidocSignatureSpan"></span>grunt-ftp-push
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.ftp_push">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.</span>ftp_push
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.toString">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-ftp-push.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-ftp-push.</span>messages</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-ftp-push.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-ftp-push.cache">module grunt-ftp-push.cache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.cache.get">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.cache.</span>get
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.cache.set">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.cache.</span>set
+            <span class="apidocSignatureSpan">(cache)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-ftp-push.ftp_push">module grunt-ftp-push.ftp_push</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.ftp_push.ftp_push">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.</span>ftp_push
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-ftp-push.messages">module grunt-ftp-push.messages</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.messages.authFailure">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>authFailure
+            <span class="apidocSignatureSpan">(user)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.messages.authSuccess">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>authSuccess
+            <span class="apidocSignatureSpan">(user)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.messages.debug">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>debug
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.messages.directoryCreated">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>directoryCreated
+            <span class="apidocSignatureSpan">(directory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.messages.fileNotExist">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>fileNotExist
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.messages.fileTransferFail">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>fileTransferFail
+            <span class="apidocSignatureSpan">(file, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.messages.fileTransferSuccess">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>fileTransferSuccess
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>anonymousLogin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>connectionClosed</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>invalidRequirements</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>noFiles</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>noNewFiles</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-ftp-push.toString">module grunt-ftp-push.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.toString.toString">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-ftp-push.utils">module grunt-ftp-push.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.utils.arrayContainsFile">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>arrayContainsFile
+            <span class="apidocSignatureSpan">(files, destination)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.utils.getDestinations">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>getDestinations
+            <span class="apidocSignatureSpan">(files)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.utils.getDirectoryPaths">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>getDirectoryPaths
+            <span class="apidocSignatureSpan">(filePaths)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.utils.getFilePaths">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>getFilePaths
+            <span class="apidocSignatureSpan">(basePath, files)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.utils.optionsAreValid">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>optionsAreValid
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.utils.trimCwd">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>trimCwd
+            <span class="apidocSignatureSpan">(filepath, cwd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-ftp-push.utils.updateCacheGetChanges">
+            function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>updateCacheGetChanges
+            <span class="apidocSignatureSpan">(cache, files)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-ftp-push" id="apidoc.module.grunt-ftp-push">module grunt-ftp-push</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.grunt-ftp-push" id="apidoc.element.grunt-ftp-push.grunt-ftp-push">
+        function <span class="apidocSignatureSpan"></span>grunt-ftp-push
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-ftp-push = function (grunt) {
+  'use strict';
+  // Project configuration.
+  grunt.initConfig({
+
+    ftp_push: {
+      default: {
+        options: {
+          authKey: 'serverA',
+          host: 'sample.server.com',
+          dest: '/html/test/',
+          port: 21
+        },
+        files: [ // Enable Dynamic Expansion, Src matches are relative to this path, Actual Pattern(s) to match
+          {expand: true, cwd: 'files/nested/another', src: ['*.js'], dest: './files/js'},
+          {expand: true, cwd: './', src: ['files/js/**/*.js']}
+        ]
+      },
+
+      sample: {
+        options: {
+          host: 'sample.server.com',
+          dest: '/html/test/',
+          username: 'myUsername',
+          password: 'myPassword',
+          debug: true // Show JSFTP Debugging information
+        },
+        files: [
+          {expand: true, cwd: './', src: ['files/nested/another/sample.js']}
+        ]
+      },
+
+      local: {
+        options: {
+          host: '127.0.0.1',
+          dest: './',
+          username: 'local_user',
+          password: '12345',
+          port: 3334
+        },
+        files: [
+          {expand: true, cwd: './', src: ['files/js/**/*.js']}
+        ]
+      }
+
+    }
+
+  });
+
+  // Actually load this plugin's task(s).
+  grunt.loadTasks('tasks');
+
+  grunt.registerTask('default', ['ftp_push:default']);
+  grunt.registerTask('sample', ['ftp_push:sample']);
+  grunt.registerTask('local', ['ftp_push:local']);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.ftp_push" id="apidoc.element.grunt-ftp-push.ftp_push">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.</span>ftp_push
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ftp_push = function (grunt) {
+  'use strict';
+
+  var basepath,
+      options,
+      server,
+      done;
+
+<span class="apidocCodeCommentSpan">  /**
+  * Based off of whats in the options, create a credentials object
+  * @param {object} options - grunt options provided to the plugin
+  * @return {object} {username: '...', password: '...'}
+  */
+</span>  var getCredentials = function getCredentials(gruntOptions) {
+    if (gruntOptions.authKey &amp;&amp; grunt.file.exists('.ftpauth')) {
+      return JSON.parse(grunt.file.read('.ftpauth'))[gruntOptions.authKey];
+    } else if (gruntOptions.username &amp;&amp; gruntOptions.password) {
+      return { username: gruntOptions.username, password: gruntOptions.password };
+    } else {
+      // Warn the user we are attempting an anonymous login
+      grunt.log.warn(messages.anonymousLogin);
+      return { username: null, password: null };
+    }
+  };
+
+  /**
+  * Helper function that uses a recursive style for creating directories until none remain
+  * @param {array} directories - Array of directory paths that will be necessary to upload files
+  * @param {function} callback - function to trigger when all directories have been created
+  */
+  var pushDirectories = function pushDirectories(directories, callback) {
+    var index = 0;
+
+    /**
+    * Recursive helper used as callback for server.raw.mkd
+    * @param {error} err - Error message if something went wrong
+    */
+    var processDir = function processDir (err) {
+      // Fail if any error other then 550 is present, 550 is Directory Already Exists
+      // these directories must exist to continue
+      if (err) {
+        if (err.code !== 550) { grunt.fail.warn(err); }
+      } else {
+        grunt.log.ok(messages.directoryCreated(directories[index]));
+      }
+
+      ++index;
+      // If there is more directories to process then keep going
+      if (index &lt; directories.length) {
+        server.raw.mkd(directories[index], processDir);
+      } else {
+        callback();
+      }
+    };
+
+    // Start processing dirs or end if none are present
+    if (index &lt; directories.length) {
+      server.raw.mkd(directories[index], processDir);
+    } else {
+      callback();
+    }
+  };
+
+  /**
+  * Helper function that uses a recursive style for uploading files until none remain
+  * @param {object[]} files - Array of file objects to upload, {src: '...', dest: '...'}
+  */
+  var uploadFiles = function uploadFiles(files) {
+    var index = 0,
+        file = files[index];
+
+    /**
+    * Recursive helper used as callback for server.raw.put
+    * @param {error} err - Error message if something went wrong
+    */
+    var processFile = function processFile (err) {
+      if (err) {
+        grunt.log.warn(messages.fileTransferFail(file.dest, err));
+      } else {
+        grunt.log.ok(messages.fileTransferSuccess(file.dest));
+      }
+
+      ++index;
+      // If there are more files, then keep pushing
+      if (index &lt; files.length) {
+        file = files[index];
+        server.put(grunt.file.read(file.src, { encoding: null }), file.dest, processFile);
+      } else {
+        // Close the connection, we are complete
+        server.raw.quit(function(quitErr) {
+          if (quitErr) {
+            grunt.log.error(quitErr);
+            done(false);
+          }
+          server.destroy();
+          grunt.log.ok(messages.connectionClosed);
+          done();
+        });
+      }
+    };
+
+    // Start uploading files
+    server.put(grunt.file.read(file.src, { encoding: null }), file.dest, processFile);
+  };
+
+  grunt.registerMultiTask('ftp_push', 'Transfer files using FTP.', function() {
+
+    var destinations,
+        updated,
+        files,
+        creds,
+        dirs;
+
+    // Merge task-specific and/or target-specific options with these defaults.
+    options = this.options({
+      incrementalUpdates: true,
+      // autoReconnect: true,
+      // reconnectLimit: 3,
+      hideCredentials: false,
+      keepAlive: 60000
+    });
+
+    // Tell Grunt not to finish until my async methods are completed, calling done() to finish
+    done = this.async();
+
+    // Check for minimum requirements
+    if (!utils.optionsAreValid(options)) {
+      grunt.log.warn(messa ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.toString" id="apidoc.element.grunt-ftp-push.toString">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-ftp-push.cache" id="apidoc.module.grunt-ftp-push.cache">module grunt-ftp-push.cache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.cache.get" id="apidoc.element.grunt-ftp-push.cache.get">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.cache.</span>get
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function () { return JSON.parse(fs.readFileSync(cachePath, 'utf-8')); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Get Credentials
+creds = getCredentials(options);
+// Get list of file objects to push, containing src &amp; path properties
+files = utils.getFilePaths(basepath, this.files);
+//- Only get changes if incrementalUpdates is on
+if (options.incrementalUpdates) {
+  // Filter these files based on whether or not they have been updated since the last push
+  updated = utils.updateCacheGetChanges(cache.<span class="apidocCodeKeywordSpan">get</span>(), files);
+  // set the cache and grab the updated files list
+  files = updated.files;
+  cache.set(updated.cache);
+}
+// Get a list of the required directories to push so the files can be uploaded
+// getDirectoryPaths takes an array of strings, get a string[] of destinations
+destinations = utils.getDestinations(files);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.cache.set" id="apidoc.element.grunt-ftp-push.cache.set">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.cache.</span>set
+        <span class="apidocSignatureSpan">(cache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (cache) { fs.writeFileSync(cachePath, JSON.stringify(cache)); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+files = utils.getFilePaths(basepath, this.files);
+//- Only get changes if incrementalUpdates is on
+if (options.incrementalUpdates) {
+  // Filter these files based on whether or not they have been updated since the last push
+  updated = utils.updateCacheGetChanges(cache.get(), files);
+  // set the cache and grab the updated files list
+  files = updated.files;
+  cache.<span class="apidocCodeKeywordSpan">set</span>(updated.cache);
+}
+// Get a list of the required directories to push so the files can be uploaded
+// getDirectoryPaths takes an array of strings, get a string[] of destinations
+destinations = utils.getDestinations(files);
+dirs = utils.getDirectoryPaths(destinations);
+// Create the FileServer
+server = new Ftp({
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-ftp-push.ftp_push" id="apidoc.module.grunt-ftp-push.ftp_push">module grunt-ftp-push.ftp_push</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.ftp_push.ftp_push" id="apidoc.element.grunt-ftp-push.ftp_push.ftp_push">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.</span>ftp_push
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ftp_push = function (grunt) {
+  'use strict';
+
+  var basepath,
+      options,
+      server,
+      done;
+
+<span class="apidocCodeCommentSpan">  /**
+  * Based off of whats in the options, create a credentials object
+  * @param {object} options - grunt options provided to the plugin
+  * @return {object} {username: '...', password: '...'}
+  */
+</span>  var getCredentials = function getCredentials(gruntOptions) {
+    if (gruntOptions.authKey &amp;&amp; grunt.file.exists('.ftpauth')) {
+      return JSON.parse(grunt.file.read('.ftpauth'))[gruntOptions.authKey];
+    } else if (gruntOptions.username &amp;&amp; gruntOptions.password) {
+      return { username: gruntOptions.username, password: gruntOptions.password };
+    } else {
+      // Warn the user we are attempting an anonymous login
+      grunt.log.warn(messages.anonymousLogin);
+      return { username: null, password: null };
+    }
+  };
+
+  /**
+  * Helper function that uses a recursive style for creating directories until none remain
+  * @param {array} directories - Array of directory paths that will be necessary to upload files
+  * @param {function} callback - function to trigger when all directories have been created
+  */
+  var pushDirectories = function pushDirectories(directories, callback) {
+    var index = 0;
+
+    /**
+    * Recursive helper used as callback for server.raw.mkd
+    * @param {error} err - Error message if something went wrong
+    */
+    var processDir = function processDir (err) {
+      // Fail if any error other then 550 is present, 550 is Directory Already Exists
+      // these directories must exist to continue
+      if (err) {
+        if (err.code !== 550) { grunt.fail.warn(err); }
+      } else {
+        grunt.log.ok(messages.directoryCreated(directories[index]));
+      }
+
+      ++index;
+      // If there is more directories to process then keep going
+      if (index &lt; directories.length) {
+        server.raw.mkd(directories[index], processDir);
+      } else {
+        callback();
+      }
+    };
+
+    // Start processing dirs or end if none are present
+    if (index &lt; directories.length) {
+      server.raw.mkd(directories[index], processDir);
+    } else {
+      callback();
+    }
+  };
+
+  /**
+  * Helper function that uses a recursive style for uploading files until none remain
+  * @param {object[]} files - Array of file objects to upload, {src: '...', dest: '...'}
+  */
+  var uploadFiles = function uploadFiles(files) {
+    var index = 0,
+        file = files[index];
+
+    /**
+    * Recursive helper used as callback for server.raw.put
+    * @param {error} err - Error message if something went wrong
+    */
+    var processFile = function processFile (err) {
+      if (err) {
+        grunt.log.warn(messages.fileTransferFail(file.dest, err));
+      } else {
+        grunt.log.ok(messages.fileTransferSuccess(file.dest));
+      }
+
+      ++index;
+      // If there are more files, then keep pushing
+      if (index &lt; files.length) {
+        file = files[index];
+        server.put(grunt.file.read(file.src, { encoding: null }), file.dest, processFile);
+      } else {
+        // Close the connection, we are complete
+        server.raw.quit(function(quitErr) {
+          if (quitErr) {
+            grunt.log.error(quitErr);
+            done(false);
+          }
+          server.destroy();
+          grunt.log.ok(messages.connectionClosed);
+          done();
+        });
+      }
+    };
+
+    // Start uploading files
+    server.put(grunt.file.read(file.src, { encoding: null }), file.dest, processFile);
+  };
+
+  grunt.registerMultiTask('ftp_push', 'Transfer files using FTP.', function() {
+
+    var destinations,
+        updated,
+        files,
+        creds,
+        dirs;
+
+    // Merge task-specific and/or target-specific options with these defaults.
+    options = this.options({
+      incrementalUpdates: true,
+      // autoReconnect: true,
+      // reconnectLimit: 3,
+      hideCredentials: false,
+      keepAlive: 60000
+    });
+
+    // Tell Grunt not to finish until my async methods are completed, calling done() to finish
+    done = this.async();
+
+    // Check for minimum requirements
+    if (!utils.optionsAreValid(options)) {
+      grunt.log.warn(messa ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-ftp-push.messages" id="apidoc.module.grunt-ftp-push.messages">module grunt-ftp-push.messages</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.messages.authFailure" id="apidoc.element.grunt-ftp-push.messages.authFailure">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>authFailure
+        <span class="apidocSignatureSpan">(user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authFailure = function (user) { return 'Could not authenticate with ' + user; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Authenticate with the server and begin pushing files up
+server.auth(creds.username, creds.password, function(err) {
+  // Use &lt;username&gt; in out put if they chose to hide username
+  var usernameForOutput = options.hideCredentials ? '&lt;username&gt;' : creds.username;
+  // If there is an error, just fail
+  if (err) {
+    grunt.fail.fatal(messages.<span class="apidocCodeKeywordSpan">authFailure</span>(usernameForOutput));
+  } else {
+    grunt.log.ok(messages.authSuccess(usernameForOutput));
+  }
+  // Push directories first
+  pushDirectories(dirs, function () {
+    // Directories have successfully been pushed, now upload files
+    uploadFiles(files);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.messages.authSuccess" id="apidoc.element.grunt-ftp-push.messages.authSuccess">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>authSuccess
+        <span class="apidocSignatureSpan">(user)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authSuccess = function (user) { return user + ' successfully authenticated!'; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    server.auth(creds.username, creds.password, function(err) {
+// Use &lt;username&gt; in out put if they chose to hide username
+var usernameForOutput = options.hideCredentials ? '&lt;username&gt;' : creds.username;
+// If there is an error, just fail
+if (err) {
+  grunt.fail.fatal(messages.authFailure(usernameForOutput));
+} else {
+  grunt.log.ok(messages.<span class="apidocCodeKeywordSpan">authSuccess</span>(usernameForOutput));
+}
+// Push directories first
+pushDirectories(dirs, function () {
+  // Directories have successfully been pushed, now upload files
+  uploadFiles(files);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.messages.debug" id="apidoc.element.grunt-ftp-push.messages.debug">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>debug
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (msg) { return 'DEBUG: ' + msg; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// set keep alive
+server.keepAlive(options.keepAlive);
+
+// Log if in debug mode
+if (options.debug) {
+  server.on('jsftp_debug', function(eventType, data) {
+    grunt.log.write(messages.<span class="apidocCodeKeywordSpan">debug</span>(eventType));
+    grunt.log.write(JSON.stringify(data, null, 2));
+  });
+}
+
+//- If there are no files to push, bail now
+if (options.incrementalUpdates &amp;&amp; dirs &amp;&amp; dirs.length === 0) {
+  console.log(messages.noNewFiles);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.messages.directoryCreated" id="apidoc.element.grunt-ftp-push.messages.directoryCreated">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>directoryCreated
+        <span class="apidocSignatureSpan">(directory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">directoryCreated = function (directory) { return directory + ' directory created successfully.'; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    */
+    var processDir = function processDir (err) {
+// Fail if any error other then 550 is present, 550 is Directory Already Exists
+// these directories must exist to continue
+if (err) {
+  if (err.code !== 550) { grunt.fail.warn(err); }
+} else {
+  grunt.log.ok(messages.<span class="apidocCodeKeywordSpan">directoryCreated</span>(directories[index]));
+}
+
+++index;
+// If there is more directories to process then keep going
+if (index &lt; directories.length) {
+  server.raw.mkd(directories[index], processDir);
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.messages.fileNotExist" id="apidoc.element.grunt-ftp-push.messages.fileNotExist">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>fileNotExist
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fileNotExist = function (path) { return 'Source file ' + path + ' not found.'; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+// Remove directories and invalid paths from this.files
+this.files.forEach(function (file) {
+  file.src = file.src.filter(function (filepath) {
+    // If the file does not exist, remove it
+    if (!grunt.file.exists(filepath)) {
+      grunt.log.warn(messages.<span class="apidocCodeKeywordSpan">fileNotExist</span>(filepath));
+      return false;
+    }
+    // If this is a file, keep it
+    return grunt.file.isFile(filepath);
+  });
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.messages.fileTransferFail" id="apidoc.element.grunt-ftp-push.messages.fileTransferFail">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>fileTransferFail
+        <span class="apidocSignatureSpan">(file, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fileTransferFail = function (file, err) { return file + ' failed to transfer because ' + err; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    /**
+    * Recursive helper used as callback for server.raw.put
+    * @param {error} err - Error message if something went wrong
+    */
+    var processFile = function processFile (err) {
+if (err) {
+  grunt.log.warn(messages.<span class="apidocCodeKeywordSpan">fileTransferFail</span>(file.dest, err));
+} else {
+  grunt.log.ok(messages.fileTransferSuccess(file.dest));
+}
+
+++index;
+// If there are more files, then keep pushing
+if (index &lt; files.length) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.messages.fileTransferSuccess" id="apidoc.element.grunt-ftp-push.messages.fileTransferSuccess">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.messages.</span>fileTransferSuccess
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fileTransferSuccess = function (file) { return file + ' transferred successfully.'; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    * Recursive helper used as callback for server.raw.put
+    * @param {error} err - Error message if something went wrong
+    */
+    var processFile = function processFile (err) {
+if (err) {
+  grunt.log.warn(messages.fileTransferFail(file.dest, err));
+} else {
+  grunt.log.ok(messages.<span class="apidocCodeKeywordSpan">fileTransferSuccess</span>(file.dest));
+}
+
+++index;
+// If there are more files, then keep pushing
+if (index &lt; files.length) {
+  file = files[index];
+  server.put(grunt.file.read(file.src, { encoding: null }), file.dest, processFile);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-ftp-push.toString" id="apidoc.module.grunt-ftp-push.toString">module grunt-ftp-push.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.toString.toString" id="apidoc.element.grunt-ftp-push.toString.toString">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-ftp-push.utils" id="apidoc.module.grunt-ftp-push.utils">module grunt-ftp-push.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.utils.arrayContainsFile" id="apidoc.element.grunt-ftp-push.utils.arrayContainsFile">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>arrayContainsFile
+        <span class="apidocSignatureSpan">(files, destination)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayContainsFile = function (files, destination) {
+  return files.some(function (file) { return file.dest === destination; });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // Set up the relative destination if one is provided
+  if (file.orig.dest) {
+    destination = path.posix.join(basePath, file.orig.dest, destination);
+  } else {
+    destination = path.posix.join(basePath, destination);
+  }
+  // If a files destination is not in the array, add the file, this matched on destination
+  if (!utils.<span class="apidocCodeKeywordSpan">arrayContainsFile</span>(filePaths, destination)) {
+    filePaths.push({
+      src: filepath,
+      dest: destination
+    });
+  }
+
+}); // Inner for-each
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.utils.getDestinations" id="apidoc.element.grunt-ftp-push.utils.getDestinations">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>getDestinations
+        <span class="apidocSignatureSpan">(files)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDestinations = function (files) {
+  return files.map(function (file) { return file.dest; });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  updated = utils.updateCacheGetChanges(cache.get(), files);
+  // set the cache and grab the updated files list
+  files = updated.files;
+  cache.set(updated.cache);
+}
+// Get a list of the required directories to push so the files can be uploaded
+// getDirectoryPaths takes an array of strings, get a string[] of destinations
+destinations = utils.<span class="apidocCodeKeywordSpan">getDestinations</span>(files);
+dirs = utils.getDirectoryPaths(destinations);
+// Create the FileServer
+server = new Ftp({
+  host: options.host,
+  port: options.port || 21,
+  debugMode: options.debug || false
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.utils.getDirectoryPaths" id="apidoc.element.grunt-ftp-push.utils.getDirectoryPaths">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>getDirectoryPaths
+        <span class="apidocSignatureSpan">(filePaths)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDirectoryPaths = function (filePaths) {
+  var directoryPaths = [],
+      regex = /\//g,
+      partial,
+      match;
+
+  filePaths.forEach(function (filePath) {
+    if (filePath.length !== 1) {
+      filePath = path.posix.normalize(filePath);
+      while((match = regex.exec(filePath)) !== null) {
+        partial = filePath.slice(0, match.index);
+        if (directoryPaths.indexOf(partial) &lt; 0 &amp;&amp; partial !== '') {
+          directoryPaths.push(partial);
+        }
+      }
+    }
+  });
+
+  return directoryPaths;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // set the cache and grab the updated files list
+  files = updated.files;
+  cache.set(updated.cache);
+}
+// Get a list of the required directories to push so the files can be uploaded
+// getDirectoryPaths takes an array of strings, get a string[] of destinations
+destinations = utils.getDestinations(files);
+dirs = utils.<span class="apidocCodeKeywordSpan">getDirectoryPaths</span>(destinations);
+// Create the FileServer
+server = new Ftp({
+  host: options.host,
+  port: options.port || 21,
+  debugMode: options.debug || false
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.utils.getFilePaths" id="apidoc.element.grunt-ftp-push.utils.getFilePaths">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>getFilePaths
+        <span class="apidocSignatureSpan">(basePath, files)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFilePaths = function (basePath, files) {
+  var filePaths = [],
+      destination;
+
+  // Files must be of type array, if not, return an empty array
+  if (Object.prototype.toString.call(files) !== '[object Array]') { return []; }
+
+  files.forEach(function (file) {
+    // For each src file we have
+    file.src.forEach(function (filepath) {
+      // Make sure the path is normalized
+      filepath = path.posix.normalize(filepath);
+      // Trim the cwd from the path to prepare it for the destination
+      destination = utils.trimCwd(filepath, file.orig.cwd);
+      // Set up the relative destination if one is provided
+      if (file.orig.dest) {
+        destination = path.posix.join(basePath, file.orig.dest, destination);
+      } else {
+        destination = path.posix.join(basePath, destination);
+      }
+      // If a files destination is not in the array, add the file, this matched on destination
+      if (!utils.arrayContainsFile(filePaths, destination)) {
+        filePaths.push({
+          src: filepath,
+          dest: destination
+        });
+      }
+
+    }); // Inner for-each
+
+  }); // Outer for-each
+
+  return filePaths;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+// Basepath of where to push
+basepath = path.posix.normalize(options.dest);
+// Get Credentials
+creds = getCredentials(options);
+// Get list of file objects to push, containing src &amp; path properties
+files = utils.<span class="apidocCodeKeywordSpan">getFilePaths</span>(basepath, this.files);
+//- Only get changes if incrementalUpdates is on
+if (options.incrementalUpdates) {
+  // Filter these files based on whether or not they have been updated since the last push
+  updated = utils.updateCacheGetChanges(cache.get(), files);
+  // set the cache and grab the updated files list
+  files = updated.files;
+  cache.set(updated.cache);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.utils.optionsAreValid" id="apidoc.element.grunt-ftp-push.utils.optionsAreValid">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>optionsAreValid
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionsAreValid = function (options) {
+  return options.host !== undefined &amp;&amp; options.dest !== undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  keepAlive: 60000
+});
+
+// Tell Grunt not to finish until my async methods are completed, calling done() to finish
+done = this.async();
+
+// Check for minimum requirements
+if (!utils.<span class="apidocCodeKeywordSpan">optionsAreValid</span>(options)) {
+  grunt.log.warn(messages.invalidRequirements);
+  done(false);
+  return;
+}
+
+// If there are no files provided, bail out with a warning
+if (this.files.length === 0) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.utils.trimCwd" id="apidoc.element.grunt-ftp-push.utils.trimCwd">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>trimCwd
+        <span class="apidocSignatureSpan">(filepath, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trimCwd = function (filepath, cwd) {
+  if (typeof cwd === 'string' &amp;&amp; filepath.substr(0, cwd.length) === cwd) {
+    filepath = filepath.substr(cwd.length);
+  }
+  return path.posix.normalize(filepath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    files.forEach(function (file) {
+// For each src file we have
+file.src.forEach(function (filepath) {
+  // Make sure the path is normalized
+  filepath = path.posix.normalize(filepath);
+  // Trim the cwd from the path to prepare it for the destination
+  destination = utils.<span class="apidocCodeKeywordSpan">trimCwd</span>(filepath, file.orig.cwd);
+  // Set up the relative destination if one is provided
+  if (file.orig.dest) {
+    destination = path.posix.join(basePath, file.orig.dest, destination);
+  } else {
+    destination = path.posix.join(basePath, destination);
+  }
+  // If a files destination is not in the array, add the file, this matched on destination
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-ftp-push.utils.updateCacheGetChanges" id="apidoc.element.grunt-ftp-push.utils.updateCacheGetChanges">
+        function <span class="apidocSignatureSpan">grunt-ftp-push.utils.</span>updateCacheGetChanges
+        <span class="apidocSignatureSpan">(cache, files)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCacheGetChanges = function (cache, files) {
+  var stats, mtime;
+
+  var changes = files.filter(function (file) {
+    stats = fs.statSync(file.src);
+    mtime = new Date(stats.mtime).getTime();
+
+    if (cache[file.src] === undefined || cache[file.src] &lt; mtime) {
+      cache[file.src] = mtime;
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  return {
+    cache: cache,
+    files: changes
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Get Credentials
+creds = getCredentials(options);
+// Get list of file objects to push, containing src &amp; path properties
+files = utils.getFilePaths(basepath, this.files);
+//- Only get changes if incrementalUpdates is on
+if (options.incrementalUpdates) {
+  // Filter these files based on whether or not they have been updated since the last push
+  updated = utils.<span class="apidocCodeKeywordSpan">updateCacheGetChanges</span>(cache.get(), files);
+  // set the cache and grab the updated files list
+  files = updated.files;
+  cache.set(updated.cache);
+}
+// Get a list of the required directories to push so the files can be uploaded
+// getDirectoryPaths takes an array of strings, get a string[] of destinations
+destinations = utils.getDestinations(files);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
