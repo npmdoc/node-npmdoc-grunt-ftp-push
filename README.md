@@ -1,4 +1,7 @@
-# api documentation for  [grunt-ftp-push (v1.2.0)](http://robert-w.github.io/grunt-ftp-push)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-ftp-push.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-ftp-push) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-ftp-push.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-ftp-push)
+# npmdoc-grunt-ftp-push
+
+#### basic api documentation for  [grunt-ftp-push (v1.2.0)](http://robert-w.github.io/grunt-ftp-push)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-ftp-push.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-ftp-push) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-ftp-push.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-ftp-push)
+
 #### Deploy your files to a FTP server.
 
 [![NPM](https://nodei.co/npm/grunt-ftp-push.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-ftp-push)
@@ -78,7 +81,8 @@
         "ovh-test": "mocha ./test/jsftp/jsftpSpec.js",
         "test": "eslint tasks/*.js && eslint test/* && mocha ./test/*.js"
     },
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "bin": {}
 }
 ```
 
